@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en" class="h-100">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Booyah READING</title>
+    <script type="module" src="./script/script.js" defer></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+
+    <link href="./css/main.css" rel="stylesheet" />
+    <link href="./css/style.css" rel="stylesheet" />
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+  </head>
+  <body class="d-flex flex-column h-100 quiz-body">
+    <!--navbar-->
+    <nav class="navbar navbar-expand-lg bg-light border-bottom rounded-bottom">
+      <div class="container">
+        <a href="#" class="navbar-brand">
+          <img
+            src="https://res.cloudinary.com/dyozmymsf/image/upload/v1738459245/boooyah_gddlnj.png"
+            alt="Booyahlogo"
+            width="175px"
+            height="65px"
+          />
+        </a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navMenu"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navMenu">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a href="index.html" class="nav-link">
+                <span class="text-primary">Home</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="readingLearn.html" class="nav-link">
+                <span class="text-primary">Reading</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="listeningLearn.html" class="nav-link">
+                <span class="text-primary">Listening</span>
+              </a>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a
+                href="#"
+                class="nav-link dropdown-toggle"
+                role="button"
+                data-bs-toggle="dropdown"
+                ><span class="text-primary">Quiz</span></a
+              >
+              <ul class="dropdown-menu">
+                <li>
+                  <a href="reading.html" class="dropdown-item"
+                    ><span class="text-primary">Reading</span></a
+                  >
+                </li>
+                <li>
+                  <a href="listening.html" class="dropdown-item"
+                    ><span class="text-primary">Listening</span></a
+                  >
+                </li>
+                <li><hr class="dropdown-divider" /></li>
+                <li>
+                  <a href="exam.html" class="dropdown-item"
+                    ><span class="text-primary">SCBT</span></a
+                  >
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div
+      class="modal fade"
+      id="myModal"
+      role="dialog"
+      style="display: block"
+      tabindex="-1"
+    >
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="myModal">
+              Welcome to Reading Practice for the EPS-TOPIK Exam!
+            </h5>
+          </div>
+          <div class="modal-body">
+            <p class="lh-base">
+              This section is designed to help you improve your Korean reading
+              comprehension skills, specifically for the Employment Permit
+              System-Test of Proficiency in Korean (EPS-TOPIK) exam.
+            </p>
+
+            <p class="fw-bold">Question Types:</p>
+            <ul>
+              <li>
+                Multiple-Choice: Select the best answer from several options.
+              </li>
+            </ul>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--Reading Quiz-->
+    <section id="scbtQuiz" class="text-center p-3 mx-2">
+      <div class="container border-bottom">
+        <div class="row justify-content-md-center my-2">
+          <div class="col-md-6 text-secondary">
+            <h3 class="my-2">
+              <span
+                ><i class="fa-solid fa-book-open-reader text-primary p-2">
+                </i></span
+              >Category
+            </h3>
+
+            <select id="dropdown-item" class="form-select my-2 text-secondary">
+              <option
+                value=""
+                disabled
+                selected
+                placeholder="Category"
+              ></option>
+              <option value="beginners">Beginner</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <div
+        id="quiz"
+        class="container my-5 p-5 col-6 mx-auto quiz-container rounded text-start"
+        width="600px"
+      >
+        <div id="category" class="my-3 justify-content-center text-dark">
+          <h3 class="question" id="question">Select Category</h3>
+        </div>
+        <div id="image"></div>
+        <div class="text-dark align-items-start mt-5" id="choices">
+          <!-- <div class="form-check mb-3">
+                <input class="form-check-input me-3 choice-prefix" type="radio" name="answer" id="a">
+                <label class="form-check-label choice-text" data-number="1" id="a_text" for="a">
+                  Choice a
+                </label>
+              </div>
+              <div class="form-check mb-3">
+                <input class="form-check-input me-3 choice-prefix" type="radio" name="answer" id="b">
+                <label class="form-check-label choice-text" data-number="2" id="b_text" for="b">
+                  Choice b
+                </label>
+              </div>
+              <div class="form-check mb-3">
+                <input class="form-check-input me-3 choice-prefix" type="radio" name="answer" id="c">
+                <label class="form-check-label choice-text" data-number="3" id="c_text" for="c">
+                  Choice c
+                </label>
+              </div>
+              <div class="form-check mb-3">
+                <input class="form-check-input me-3 choice-prefix" type="radio" name="answer" id="b">
+                <label class="form-check-label choice-text" data-number="4" id="d_text" for="d">
+                  Choice d
+                </label>
+              </div> -->
+          <!-- <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                <label class="form-check-label" for="flexRadioDefault2">
+                  Default checked radio
+                </label>
+              </div> -->
+        </div>
+        <div class="d-grid col-6 my-auto mx-auto mt-5">
+          <button
+            id="submit"
+            class="btn btn-secondary my-auto text-light"
+            type="button"
+          >
+            Submit
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="px-5">
+      <div id="exam-number" class="text-center"></div>
+      <div class="progress">
+        <div
+          id="exam-progress"
+          class="progress-bar bg-secondary"
+          role="progressbar"
+        ></div>
+      </div>
+    </section>
+
+    <footer
+      id="footer"
+      class="p-2 bg-dark text-light text-center mt-auto rounded-top"
+    >
+      <div class="container">
+        <div class="row align-items-center justify-content-center">
+          <div class="col-md order-last order-md-first text-md-start my-3">
+            <a href="#"
+              ><span
+                ><img
+                  class
+                  src="https://res.cloudinary.com/dyozmymsf/image/upload/v1738459245/logo_boooyah_light_jkciqv.png"
+                  alt="Booyahlogo"
+                  width="175px"
+                  height="65px" /></span
+            ></a>
+            <p>Copyright &copy; <span id="year"></span> Booyah</p>
+          </div>
+          <!-- <div class="social col-md pt-5 px-5 my-3">
+            <a href="#"><i class="mx-2 px-2 fa-brands fa-facebook h3"></i></a>
+            <a href="#"><i class="mx-2 px-2 fa-brands fa-twitter h3"></i></a>
+            <a href="#"><i class="mx-2 px-2 fa-brands fa-youtube h3"></i></a>
+            <a href="#"><i class="mx-2 px-2 fa-brands fa-linkedin h3"></i></a>
+          </div>
+          <div class="contact col-md text-md-end my-3">
+            <a href="#" class="text-decoration-none p-2">About Us</a>
+            <br />
+            <a href="#" class="text-decoration-none p-2">Terms of use</a>
+            <a href="#" class="text-decoration-none p-2">Privacy and Policy</a>
+          </div> -->
+        </div>
+      </div>
+    </footer>
+    <script>
+      const year = new Date().getFullYear();
+      document.getElementById('year').textContent = year;
+    </script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
