@@ -1,6 +1,6 @@
 
 
-![Logo](https://res.cloudinary.com/dyozmymsf/image/upload/v1738459245/boooyah_gddlnj.png){:height="50px" width="50px"}
+![Logo](https://res.cloudinary.com/dyozmymsf/image/upload/v1738459245/boooyah_gddlnj.png)
 ![Static Badge](https://img.shields.io/badge/status-active-green)
 
 
