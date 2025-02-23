@@ -1,12 +1,12 @@
 import axios from 'axios';
 class Audio {
   constructor() {
-    this._apiUrl = 'http://localhost:5000';
+    // this._apiUrl = 'http://localhost:5000';
     this.fetchAudio();
   }
 
   async fetchAudio() {
-    const res = await axios.get(`${this._apiUrl}/api/audiolearnings`);
+    const res = await axios.get(`/api/audiolearnings`);
     this.audio = res.data.data;
     console.log(this.audio);
     this.displayAudio();
