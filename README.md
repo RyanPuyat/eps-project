@@ -1,10 +1,10 @@
 
 
-![Logo](https://res.cloudinary.com/dyozmymsf/image/upload/v1738459245/boooyah_gddlnj.png)
+![Logo](https://res.cloudinary.com/dyozmymsf/image/upload/v1740211837/eprscornerblue_khs3pq.png)
 ![Static Badge](https://img.shields.io/badge/status-active-green)
 
 
-# EPS Project - Booyah
+# EPS Project - EPS Corner
 
 ## Description:
 
