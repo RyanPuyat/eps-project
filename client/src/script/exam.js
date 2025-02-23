@@ -17,7 +17,7 @@ class Quiz {
     this.choices = document.querySelectorAll('.answer');
     this.categoryDropdown = document.getElementById('dropdown-item');
     this.categoryDropdown.options[0].text = 'Select Category';
-    this._apiUrl = 'http://localhost:5000';
+    // this._apiUrl = 'http://localhost/5000';
 
     document
       .getElementById('submit')
@@ -39,9 +39,7 @@ class Quiz {
   async fetchQuestions() {
     try {
       const selectedCategory = document.getElementById('dropdown-item').value;
-      const res = await axios.get(
-        `${this._apiUrl}/api/categories/${selectedCategory}`
-      );
+      const res = await axios.get(`/api/categories/${selectedCategory}`);
       this.questions = res.data.data;
       this._getNewQuestions();
       console.log(this.questions);

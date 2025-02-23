@@ -1,4 +1,4 @@
-import '@fortawesome/fontawesome-free/css/all.css';
+// import '@fortawesome/fontawesome-free/css/all.css';
 import Quiz from './exam';
 import Reading from './reading';
 import Listening from './listening';
@@ -44,6 +44,7 @@ function init() {
       break;
     case '/listening.html':
       listening();
+      break;
     case '/listeningLearn.html':
       audio();
       break;

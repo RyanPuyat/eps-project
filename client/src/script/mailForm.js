@@ -3,7 +3,7 @@ import axios from 'axios';
 class MailForm {
   constructor() {
     this._formSection = document.getElementById('inquiry');
-    this._apiUrl = 'http://localhost:5000/send-';
+    this._apiUrl = 'http:/localhost:5000/send';
   }
 
   sendQuery(data) {
