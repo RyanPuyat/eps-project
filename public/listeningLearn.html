@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Eps LISTENING</title>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script type="module" crossorigin src="/style-CgfOdv.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/style.css">
+  </head>
+  <body class="main-body">
+    <!--navbar-->
+    <nav
+      class="navbar navbar-expand-lg bg-light border-bottom rounded-bottom fixed-top"
+    >
+      <div class="container">
+        <a href="#" class="navbar-brand">
+          <img
+            src="https://res.cloudinary.com/dyozmymsf/image/upload/v1740211837/eprscornerblue_khs3pq.png"
+            alt="epscorner"
+            width="250px"
+            height="65px"
+          />
+        </a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navMenu"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navMenu">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a href="index.html" class="nav-link">
+                <span class="text-primary">Home</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="readingLearn.html" class="nav-link">
+                <span class="text-primary">Reading</span>
+              </a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                href="#"
+                class="nav-link dropdown-toggle"
+                role="button"
+                data-bs-toggle="dropdown"
+                ><span class="text-primary">Practice</span></a
+              >
+              <ul class="dropdown-menu">
+                <li>
+                  <a href="reading.html" class="dropdown-item"
+                    ><span class="text-primary">Reading</span></a
+                  >
+                </li>
+                <li>
+                  <a href="listening.html" class="dropdown-item"
+                    ><span class="text-primary">Listening</span></a
+                  >
+                </li>
+                <li><hr class="dropdown-divider" /></li>
+                <li>
+                  <a class="dropdown-item" href="exam.html"
+                    ><span class="text-primary">SCBT</span></a
+                  >
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!---Showcase-->
+
+    <!--History-->
+
+    <section id="history">
+      <div class="container lh-4">
+        <div class="text-center">
+          <h4 class="text-secondary">Listening Practice</h4>
+          <p class="text-dark mt-3 text-start">
+            Embarking on the journey of learning to listen in Korean is an
+            exciting and rewarding endeavor. It opens doors to a deeper
+            understanding of Korean culture and allows you to connect with
+            native speakers on a more personal level. While it may seem
+            challenging at first, with consistent effort and the right approach,
+            you can gradually improve your listening comprehension and unlock
+            the richness of the spoken language.
+          </p>
+        </div>
+
+        <!--Audio-->
+
+        <div id="audioPlayer"></div> 
+      </div>
+    </section>
+
+    <footer id="footer" class="p-2 bg-dark text-light text-center rounded-top">
+      <div class="container">
+        <div class="row align-items-center justify-content-center">
+          <div class="col-md order-last order-md-first text-md-start my-3">
+            <a href="#"
+              ><span
+                ><img
+                  class
+                  src="https://res.cloudinary.com/dyozmymsf/image/upload/v1740212493/eprscornerwhite_flkyld.png"
+                  alt="epscorner"
+                  width="250px"
+                  height="65px" /></span
+            ></a>
+            <p>Copyright &copy; <span id="year"></span> Eps Corner</p>
+          </div>
+          <!-- <div class="social col-md pt-5 px-5 my-3">
+            <a href="#"><i class="mx-2 px-2 fa-brands fa-facebook h3"></i></a>
+            <a href="#"><i class="mx-2 px-2 fa-brands fa-twitter h3"></i></a>
+            <a href="#"><i class="mx-2 px-2 fa-brands fa-youtube h3"></i></a>
+            <a href="#"><i class="mx-2 px-2 fa-brands fa-linkedin h3"></i></a>
+          </div>
+          <div class="contact col-md text-md-end my-3">
+            <a href="#" class="text-decoration-none p-2">About Us</a>
+            <br />
+            <a href="#" class="text-decoration-none p-2">Terms of use</a>
+            <a href="#" class="text-decoration-none p-2">Privacy and Policy</a>
+          </div>
+        </div> -->
+      </div>
+    </footer>
+
+    <script>
+      const year = new Date().getFullYear()
+      document.getElementById('year').textContent = year
+    </script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+</html>
