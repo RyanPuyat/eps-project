@@ -14,6 +14,7 @@ export default {
         otherPage2: path.resolve(__dirname, 'src/reading.html'),
         otherPage3: path.resolve(__dirname, 'src/listening.html'),
         otherPage4: path.resolve(__dirname, 'src/readingLearn.html'),
+        otherPage5: path.resolve(__dirname, 'src/listeningLearn.html'),
       },
       output: {
         assetFileNames: 'assets/[name][extname]',
